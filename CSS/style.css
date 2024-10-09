@@ -1,0 +1,385 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que padding y border se incluyan en el tamaño total */
+}
+
+.color {
+    color: black;
+}
+
+:root {
+    --verde-bosque: #4A7C2E; /* Verde oscuro natural */
+    --marron-tierra: #8B5B29; /* Marrón tierra */
+    --azul-claro: #A1C8E0; /* Azul claro, suavidad de agua */
+    --beige-arena: #E6D7B9; /* Beige arena */
+    --gris-oscuro: #4B4B4B; /* Gris oscuro neutro */
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Fuente agradable */
+    background-color: var(--beige-arena); /* Color de fondo suave */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 5%; /* Padding superior e inferior de 20px y laterales de 5% */
+    font-weight: bold;
+    background-color: var(--verde-bosque);
+}
+
+h1 {
+    color: white;
+    font-size: 45px;
+    text-decoration: none;
+}
+
+h2 {
+    color: var(--gris-oscuro); /* Un gris oscuro para un mejor contraste */
+    text-align: center;
+    margin: 20px 0; /* Margen superior e inferior */
+}
+
+ul {
+    list-style-type: none; /* Eliminar los puntos de la lista */
+    margin: 0; /* Eliminar márgenes */
+    padding: 0; /* Eliminar rellenos */
+    display: flex; /* Usar flexbox para el menú */
+}
+
+ul li {
+    display: inline-block; /* Elementos de lista en línea */
+    padding: 0 15px; /* Espacio entre los elementos de la lista */
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Repetir 3 columnas */
+    grid-template-rows: auto; /* Ajustar automáticamente */
+    grid-template-areas: 
+        '1img 2img 3img'
+        '1p 2p 3p'
+        'video video video'
+        'info1 info2 info3'
+        'map map texto'
+        'footer footer footer';
+    background-color: white;
+    gap: 20px; /* Espacio entre los elementos de la cuadrícula */
+    padding: 8%; /* Espacio alrededor del contenido */
+}
+
+#img, #img2, #img3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+#img {
+    grid-area: 1img;
+}
+
+#img2 {
+    grid-area: 2img;
+}
+
+#img3 {
+    grid-area: 3img;
+}
+
+img {
+    height: 350px;
+    width: 350px;
+    border-radius: 10%;
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones más suaves */
+}
+
+#img:hover, #img2:hover, #img3:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra más sutil */
+}
+
+p {
+    font-size: 18px; /* Un poco más pequeño para mejor legibilidad */
+    text-align: center;
+    color: var(--marron-tierra); /* Color marrón tierra */
+    padding: 10px;
+}
+
+#video {
+    background-color: var(--gris-oscuro); /* Un gris más atractivo */
+    grid-area: video;
+    width: 100%;
+    height: 360px;
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+#info1, #info2, #info3 {
+    background-color: var(--beige-arena); /* Beige claro */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#map {
+    grid-area: map;
+    width: 100%;
+    height: 400px;
+    border-radius: 8px;
+}
+
+#iframe {
+    width: 100%;
+    height: 100%;
+}
+
+#texto {
+    grid-area: texto;
+    padding: 20px;
+    color: var(--verde-bosque); /* Verde oscuro */
+}
+
+/* Importar fuente de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.logo img {
+    width: 135px;
+    height: 135px;
+}
+
+/* Footer actualizado con colores coherentes */
+footer {
+    background-color: #212121; /* Gris oscuro */
+}
+
+.footerContainer {
+    background-color: #4E342E; /* Marrón claro */
+    padding: 70px 30px 20px;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: #D7CCC8; /* Beige claro */
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.socialIcons a i {
+    font-size: 2em;
+    color: #212121; /* Gris oscuro */
+    opacity: 0.9;
+}
+
+.socialIcons a:hover {
+    background-color: #A4D65E; /* Verde claro en hover */
+    transition: 0.5s;
+}
+
+.socialIcons a:hover i {
+    color: #FFFFFF; /* Blanco en hover */
+    transition: 0.5s;
+}
+
+.footerNav {
+    margin: 30px 0;
+}
+
+.footerNav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.footerNav ul li a {
+    color: #D7CCC8; /* Beige claro */
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footerNav ul li a:hover {
+    color: #A4D65E; /* Verde claro en hover */
+    opacity: 1;
+}
+
+.footerBottom {
+    background-color: #212121; /* Gris oscuro */
+    padding: 20px;
+    text-align: center;
+}
+
+.footerBottom p {
+    color: #D7CCC8; /* Beige claro */
+}
+
+.designer {
+    color: #757575; /* Gris medio */
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    main {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas para pantallas medianas */
+        grid-template-areas: 
+            '1img 1img'
+            '2img 2img'
+            '3img 3img'
+            '1p 2p'
+            'video video'
+            'info1 info2'
+            'info3 info3'
+            'map map'
+            'texto texto'
+            'footer footer'; /* Footer ocupa la última fila */
+    }
+
+    h1 {
+        font-size: 35px; /* Ajustar tamaño de fuente para pantallas más pequeñas */
+    }
+
+    img {
+        height: 350px; /* Ajustar tamaño de imagen */
+        width: 350px;
+    }
+
+    p {
+        font-size: 16px; /* Ajustar tamaño de texto */
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr; /* Una columna */
+        grid-template-rows: repeat(14, auto); /* Trece filas */
+        grid-template-areas: 
+            '1img'
+            '2img'
+            '3img'
+            '1p'
+            '2p'
+            '3p'
+            'video'
+            'video'
+            'info1'
+            'info2'
+            'info3'
+            'map'
+            'texto'
+            'footer'; /* Footer ocupa la última fila */
+            background-color: white;
+        gap: 20px; /* Espacio entre los elementos de la cuadrícula */
+        padding: 8%; /* Espacio alrededor del contenido */
+    }
+
+    nav {
+        flex-direction: column; /* Cambiar a una columna */
+        align-items: flex-start; /* Alinear los elementos a la izquierda */
+    }
+
+    h1 {
+        font-size: 30px; /* Ajustar el tamaño de la fuente para títulos */
+    }
+
+    ul {
+        flex-direction: column; /* Cambiar la dirección de la lista a columna */
+        width: 100%; /* Ocupar el ancho completo */
+        text-align: center; /* Centrar el texto */
+    }
+
+    ul li {
+        display: block; /* Cada elemento de la lista ocupa toda la línea */
+        padding: 10px 0; /* Espacio superior e inferior */
+        width: 100%; /* Hacer que los elementos de la lista ocupen el ancho completo */
+        
+    }
+
+    img{
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    #video {
+        aspect-ratio: 4 / 3; /* Cambiar la relación de aspecto a 4:3 para pantallas más pequeñas */
+        height: auto; /* La altura se ajusta automáticamente */
+    }
+
+    /* Opcionalmente, puedes ajustar otros estilos relacionados con el video */
+    p {
+        font-size: 16px; /* Tamaño de fuente más pequeño para descripciones */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Ajustes para los párrafos */
+    #info1, #info2, #info3 {
+        padding: 15px; /* Espacio reducido en pantallas más pequeñas */
+        margin: 10px 0; /* Añadir margen superior e inferior */
+        font-size: 16px; /* Ajustar el tamaño de fuente para mejor legibilidad */
+
+    }
+
+    p {
+        font-size: 12px; /* Tamaño de fuente más pequeño para descripciones */
+    }
+
+    /* Asegurarse de que el contenedor del video no interfiera con el fondo de los párrafos */
+    #video {
+        margin: 15px 0; /* Añadir margen alrededor del video */
+    }
+}
+
+/* Media Queries para tablets */
+@media (max-width: 1024px) {
+    nav {
+        flex-direction: column; /* Cambiar a una columna */
+        align-items: flex-start; /* Alinear los elementos a la izquierda */
+    }
+
+    h1 {
+        font-size: 35px; /* Ajustar el tamaño de la fuente para títulos */
+    }
+
+
+    img {
+        height: 300px; /* Ajustar el tamaño de las imágenes para tablets */
+        width: 300px;
+    }
+
+    /* Ajustes adicionales para los párrafos en tablets */
+    #info1, #info2, #info3 {
+        padding: 15px; /* Ajuste de padding para tablets */
+        margin: 15px 0; /* Ajustar márgenes */
+        font-size: 18px; /* Aumentar ligeramente el tamaño de fuente */
+    }
+
+    #video {
+        height: 320px; /* Ajustar el tamaño del video para tablets */
+    }
+
+    #map {
+        height: 300px; /* Ajustar el tamaño del mapa para tablets */
+    }
+}

@@ -1,0 +1,20 @@
+Verde bosque: #4A7C2E
+Marrón tierra: #8B5B29
+Azul claro: #A1C8E0
+Beige arena: #E6D7B9
+Gris oscuro: #4B4B4B
+Gris oscuro (footer): #212121
+Marrón claro (footer): #4E342E
+Beige claro (botones y texto del footer): #D7CCC8
+Verde claro (hover en iconos sociales): #A4D65E
+Gris medio (texto del footer): #757575
+
+Beige claro: #D7CCC8
+Marrón claro: #4E342E
+Verde oscuro: #1F8F3A
+Verde claro: #A4D65E
+Blanco: #FFFFFF
+Gris oscuro: #212121
+Gris medio: #757575
+Color original para texto: #291c1c
+Beige claro (footer y botones): #D7CCC8

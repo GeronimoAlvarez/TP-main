@@ -293,3 +293,11 @@ h2 {
 
 /* Importar fuente de Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+h1{
+    animation: aparecer 2s 2;
+}
+
+h2{
+    animation: aparecer2 2s 2;
+}
